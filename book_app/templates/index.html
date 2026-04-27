@@ -7,15 +7,15 @@
 </head>
 <body>
     <h1>Список книг</h1>
-    {%for book in books%}
     <ul>
+        {%for book in books%}
         <li>
-            <h3>{{book.name}}</h3>
+            <h3>{{book.title}}</h3>
             <p>{{book.date}}</p>
             <p>{{book.price}}</p>
-            <a href="author/{{author.id}}">{{book.author}}</a>
+            <a href="/author/{{ book.author.id }}">{{ book.author.name }}</a>
         </li>
+        {%endfor%}
     </ul>
-    {%endfor%}
 </body>
 </html>

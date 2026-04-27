@@ -7,12 +7,10 @@
 </head>
 <body>
     <h1>{{author.name}}</h1>
-    {%for book in books%}
     <ul>
-        <li>
-            <h3>{{book.title}}</h3>
-        </li>
+        {%for book in author.books_set.all%}
+        <li>{{book.title}}</li>
+        {%endfor%}
     </ul>
-    {%endfor%}
 </body>
 </html>
